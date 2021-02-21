@@ -1,0 +1,22 @@
+.page-footer{
+    background-color: var(--color-primary);
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-light);
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.page-footer #sobre{
+    text-align: end;
+    padding: 2rem 5rem;
+}
+
+.page-footer #sobre a{
+    text-decoration: none;
+    color: var(--color-text-light);
+    transition: opacity 0.2s;
+}
+
+.page-footer #sobre a:hover{
+    opacity: 0.6;
+}

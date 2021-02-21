@@ -1,0 +1,46 @@
+:root{
+    --color-background-index-light: #d1f8ff;
+    --color-background-index-dark: #21dfdf;
+    --color-text-base: #565252;
+    --color-text-base-light: #A5A5A5;
+    --color-text-light: #979797;
+    --color-primary: #72D5EB; 
+    font-size: 60%;
+    --color-background:#FFFFFF;
+    --color-background-quiz: #E5E5E5;
+    --color-background-sub-container:#A5DCE3;
+    --color-background-buttom:#76A7E1;
+    --color-background-bar: #72D5EB;
+    --color-border: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button, 
+textarea {
+    font: 500 1.6rem Poppins;
+    color: var(--color-text-base);
+}
+
+#container{
+    width: 90%;
+    max-width: 700px;
+}
+
+@media(max-width: 699px){
+    :root{
+        font-size: 45%;
+    }
+}
+
+@media(min-width: 700px){
+    :root{
+        font-size: 65%;
+    }
+}

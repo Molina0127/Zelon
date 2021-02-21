@@ -1,0 +1,104 @@
+html, body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#container{
+    margin: auto;
+    padding: 1.5rem 0;
+}
+
+#body-index{
+    background-image: repeating-linear-gradient(135deg,var(--color-background-index-light), var(--color-background-index-dark));
+    background-attachment: fixed;
+}
+
+.logo-container{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.logo-container img{
+    width: 40%;
+    margin-bottom: 3rem;
+}
+
+
+.decorative-image{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    opacity: 0.75;
+    margin-bottom: 3rem;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.buttons-container .button-quest{
+    text-decoration:none;
+    display: flex;
+    width: 35rem;
+    height: 8rem;
+   
+    font-family: "Archivo";
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #565252;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 2.5rem;
+    background-color: #79aae6;
+
+    margin-top: 1.5rem;
+    line-height: 3rem;
+}
+
+.buttons-container .button-quest:hover{
+    background-color: #6f9fdb;
+    transition: 0.2s;
+}
+
+@media(min-width: 1000px){
+    #body-index #container{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 275px;
+        grid-template-areas:
+        "logo image image"
+        "button image image";
+
+    }
+
+    .logo-container{
+        grid-area: logo;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .logo-container img{
+        width: 65%;
+        margin-bottom: 0;
+    }
+
+    .decorative-image{
+        width: 100%;
+        grid-area: image;
+        margin-bottom: 0;
+    }
+
+    .buttons-container{
+        grid-area: button;
+    }
+
+    .buttons-container .button-quest{
+        width: 30rem;
+    }
+}

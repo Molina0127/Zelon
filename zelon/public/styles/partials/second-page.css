@@ -1,0 +1,160 @@
+
+
+#second-page {
+    background: var(--color-background); 
+}
+
+
+
+#containers{   
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 4.3%;
+    
+    
+
+    border: 1px solid red;
+
+}
+
+#container{
+    background: var(--color-background-sub-container);    
+    
+    margin-left: 10%;
+    margin-right: 10%; 
+
+    margin-bottom: 4%;
+    margin-top: 4%;
+
+    border: 1px solid black;
+    border-radius: 3.2rem;
+    box-sizing: border-box;
+    
+
+    
+    height: 80%;
+
+    display: flex;
+    
+    justify-content: center;
+    
+
+}
+
+/* #second-page #top-bar-container{
+    width: 100%;
+    height: 8rem;
+
+    background: var(--color-background-bar); 
+
+    box-sizing: border-box;
+
+    //border: 1px solid black;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-right: 2rem;
+} 
+
+#top-bar-container a img{
+    height: 12rem;
+    border: 1px solid black;
+}
+
+#top-bar-container img{
+    height: 8rem;
+    border: 1px solid black;
+} */
+
+h1{
+    margin-top: 9rem;
+    font-size: 4.6rem;
+    font-weight: 400;
+    width:  100%;
+    text-align: center;
+    
+}
+
+/* #second-page #down-bar-container{
+    width: 100%;
+    background: var(--color-background-bar);
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+#down-bar-container h2{
+    margin: 2rem;
+}
+     */
+#second-page .rectangle1{
+    
+    background: var(--color-background-quiz);
+    width: 84%;
+    height: 80%;
+
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow:  rgba(0, 0, 0, 0.25);
+    border-radius: 3.2rem;
+}
+
+.rectangle1 h2{
+    
+    box-sizing: border-box;
+    font-size: 200%;
+    
+    
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    
+}
+    
+.rectangle1 #answer1{
+    text-decoration: none;
+    display: flex;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--color-background-buttom);
+
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+
+    font-size: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    color: var(--color-text-base);
+
+      
+    /*height: 3.6em;*/
+    width: 80%;
+}
+    
+.imagem-quiz img{
+    align-items: center;
+    
+    margin-left: 2rem; 
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: 25%;
+    border-radius: 1px solid black;
+
+}
+
+.rectangle1{
+    text-align: center;
+}
+

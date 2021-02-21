@@ -1,0 +1,57 @@
+#page-sobre{
+    width: 100%;
+    height: 100%;
+}
+
+.page-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+p{
+    font: 500 2.2rem Archivo;
+}
+
+#title{
+    font: 700 3rem Poppins;
+    color: var(--color-text-base);
+    margin-bottom: 1.5rem;
+}
+
+#conteudo{
+    text-align: left;
+}
+
+#conteudo p{
+    margin-bottom: 1.5rem;
+    color: var(--color-text-base-light);
+}
+
+#conteudo #entre-contato{
+    font: 500 2.6rem Poppins;
+    color: var(--color-text-base);
+}
+hr{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+@media(min-width:700px){
+    #container{
+        padding: 3rem 5rem;
+        margin-bottom: 3.5rem;
+    }
+
+        .page-footer{
+            position: relative;
+        }
+    
+}
+
+@media(max-height:400px){
+    .page-footer{
+        position: relative;
+    }
+}
