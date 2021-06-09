@@ -1,0 +1,20 @@
+#container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 9rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media(min-width:700px){
+    #container{
+        max-width: 1000px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 9rem;
+        padding: 5rem 5rem;
+        box-shadow: 0px 2px 4px 1.5px rgba(0,0,0,0.25);
+        border-radius: 2rem;
+    }
+}

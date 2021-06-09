@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Questionário</title>
+
+    <link rel="shortcut icon" href="/images/Logo_zelon.svg" type="image/png">
+
+    <link rel="stylesheet" href="/styles/main.css"></link>
+    <link rel="stylesheet" href="/styles/partials/header.css"></link>
+    <link rel="stylesheet" href="/styles/partials/footer.css"></link>
+    <link rel="stylesheet" href="/styles/partials/pageSave.css"></link>
+    <link rel="stylesheet" href="/styles/partials/container.css"></link>
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+    <script src="/scripts/addQuestion.js" defer></script>
+    
+    <script>
+        senha = prompt("Digite a senha:","digite sair para cancelar");
+            if (senha =="3024369"){
+            document.getElementById('pagina').style.display = 'block';
+            }else if(senha ==""){
+                alert("campo obrigatorio");window.location = "/save" 
+                }else if(senha =="sair"){
+                alert("cancelado");window.location = "/"
+        }else{
+        alert("senha errada");window.location = "/save"
+        }
+    </script>
+    
+</head>
+<body id="page-Save">
+    <div>
+        <header class="page-header">
+            <div class="top-bar">
+                <a href="/">
+                    <img src="/images/toppng.com-home-icon-home-house-icon-house-icon-free-337x293.png" alt="Home">
+                </a>
+                
+                <img src="/images/Logo_zelon_full_recorte.svg" alt="Logo">
+            </div>
+        </header>
+
+        <main id="container">
+            <form action="/saveQuiz" id="create-class" method="POST">
+                <fieldset>
+                    <legend> Crie seu quiz </legend>
+
+                    <div class="input-block">
+                        <label for="title"> Título </label>    
+                        <input name="title" id="title" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="imageQuiz"> Imagem do Quiz <small>( comece com //https: )</small> </label>    
+                        <input name="imageQuiz" id="imageQuiz" type="url" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="schedule-items">
+                    
+                    <legend>Perguntas disponíveis
+                        <button type="button" id="add-time">+ Nova Pergunta</button>
+                    </legend>
+
+                    <div class="schedule-item">
+                        <div class="input-block">
+                            <label for="question"> Pergunta </label>    
+                            <input name="question" id="question" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="answer"> Resposta <small>(de 0 a 3)</small> </label>    
+                            <input name="answer" id="answer" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option0"> Opção 0 </label>    
+                            <input name="option0" id="option0" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option1"> Opção 1 </label>    
+                            <input name="option1" id="option1" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option2"> Opção 2 </label>    
+                            <input name="option2" id="option2" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option3"> Opção 3 </label>    
+                            <input name="option3" id="option3" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="textSugest"> Texto da sugestão </label>    
+                            <input name="textSugest" id="textSugest" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="imageSugest"> Imagem da sugestão <small>( comece com //https: )</small> </label>    
+                            <input name="imageSugest" id="imageSugest" type="url" placeholder="Opcional">
+                        </div>
+                        <div class="input-block">
+                            <label for="textSugestPos"> Texto pós-imagem </label>    
+                            <input name="textSugestPos" id="textSugestPos" placeholder="Opcional">
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="input-block">
+                            <label for="question"> Pergunta </label>    
+                            <input name="question" id="question" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="answer"> Resposta <small>(de 0 a 3)</small> </label>    
+                            <input name="answer" id="answer" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option0"> Opção 0 </label>    
+                            <input name="option0" id="option0" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option1"> Opção 1 </label>    
+                            <input name="option1" id="option1" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option2"> Opção 2 </label>    
+                            <input name="option2" id="option2" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="option3"> Opção 3 </label>    
+                            <input name="option3" id="option3" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="textSugest"> Texto da sugestão </label>    
+                            <input name="textSugest" id="textSugest" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="imageSugest"> Imagem da sugestão <small>( comece com //https: )</small> </label>    
+                            <input name="imageSugest" id="imageSugest" type="url" placeholder="Opcional">
+                        </div>
+                        <div class="input-block">
+                            <label for="textSugestPos"> Texto pós-sugestão </label>    
+                            <input name="textSugestPos" id="textSugestPos" placeholder="Opcional">
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <article id="footerForm">
+                <p>
+                    <img src="/images/pngwingWarning.png" alt="Aviso Importante">
+                    Importante !<br>
+                    Preencha todos os dados
+                </p>
+                <button type="submit" form="create-class">Salvar Cadastro</button>
+            </article>
+        </main>
+
+
+        <footer class="page-footer">
+                <div id="sobre">© 2021 Zelon | 
+                <a href="/sobre">Sobre</a></div>
+        </footer>
+    </div>
+    
+</body>
+</html>

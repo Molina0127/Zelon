@@ -1,0 +1,153 @@
+#page-quiz
+{
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    font: 500 1.6rem 'Josefin Sans';
+    color: var(--color-text-light);
+}
+h1 {
+    text-align: center;
+    color: var(--color-text-base);
+    font-size: 3rem;
+}
+
+.page-header{
+    z-index: 1;
+}
+
+
+#question-present{
+    font: 500 1.6rem 'Josefin Sans';
+    margin-bottom: 1rem;
+}
+
+#image-quiz{
+    width: 80%;
+    border-radius: 3rem;
+    height: 20rem;
+    display: flex;
+    margin: 1.5rem auto;
+}
+
+#num{
+    font: 500 2rem 'Josefin Sans';
+    text-align: end;
+    margin-bottom: 1rem;
+}
+
+button 
+{
+    border-color: var(--color-text-base-light);
+    width: 22.5rem;
+    border-radius: 1.4rem;
+    background-color: #5995A3;
+    
+    text-align: center;
+    padding: 1rem;
+    margin: 0 1.5rem;
+    /* border: 1px solid black; */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    cursor: pointer;
+    margin-top: 2rem;
+
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+
+    transition: 0.4s;
+    outline: 0px;
+    
+}
+
+button:hover{
+    background-color: #4f8591;
+    transform: translateY(-0.4rem);
+}
+
+#button-container{
+    display: flex;
+}
+
+ul 
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+ul li
+{
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 1rem;
+    display: inline-block; 
+}
+.option-answer{
+    background: #F5F8FA;
+    display: inline-block; 
+    padding: 2rem;
+    width: 90%;
+    border: 1px solid #76A7E1;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+.option-answer:hover{
+    background-color: #ebedee;
+    color: var(--color-text-base);
+}
+
+#question-present{
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+#avise{
+    text-align: center;
+    font: 700 2.4rem 'Josefin Sans';
+    color: rgba(255, 0, 0, 0.698);
+}
+
+#prev 
+{
+    display:none;
+}
+
+#next{
+    margin-left:auto;
+}
+
+#start 
+{
+    display:none;
+    width: 100px;
+}
+input[type="radio"]{
+    cursor: pointer;
+    margin-right: 1.5rem ;
+}
+
+body #container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 9rem;
+    text-align: center;
+    
+    margin-bottom: 6rem;
+}
+
+@media(min-width:800px){
+    ul li{
+        width: 50%;
+        margin: 1.5rem 0;
+    }
+
+    body #container{
+        
+        margin-bottom: 0rem;
+        
+    }
+}

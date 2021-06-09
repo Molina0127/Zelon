@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Questionário</title>
+
+    <link rel="shortcut icon" href="/images/Logo_zelon.svg" type="image/png">
+
+    <link rel="stylesheet" href="/styles/main.css"></link>
+    <link rel="stylesheet" href="/styles/partials/header.css"></link>
+    <link rel="stylesheet" href="/styles/partials/footer.css"></link>
+    <link rel="stylesheet" href="/styles/partials/quiz.css"></link>
+    <link rel="stylesheet" href="/styles/partials/answers.css"></link>
+    <link rel="stylesheet" href="/styles/partials/container.css"></link>
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page-quiz">
+    <div>
+        <header class="page-header">
+            <div class="top-bar">
+                <a href="/">
+                    <img src="/images/toppng.com-home-icon-home-house-icon-house-icon-free-337x293.png" alt="Home">
+                </a>
+                
+                <img src="/images/Logo_zelon_full_recorte.svg" alt="Logo">
+            </div>
+        </header>
+
+        <main  id="container">
+            <div class="quiz-all">
+
+                <div style="display: none;">
+                    <div id="capturaLeng">{{length}}</div>
+                    {%for questions in allQuestions%}
+
+                    <div id="capturaQuest-{{loop.index0}}">{{questions.question}}</div>
+                    <div id="capturaOp0-{{loop.index0}}">{{questions.option0}}</div>
+                    <div id="capturaOp1-{{loop.index0}}">{{questions.option1}}</div>
+                    <div id="capturaOp2-{{loop.index0}}">{{questions.option2}}</div>
+                    <div id="capturaOp3-{{loop.index0}}">{{questions.option3}}</div>
+                    <div id="capturaAns-{{loop.index0}}">{{questions.answer}}</div>
+
+                    {%endfor%}
+                </div>
+
+                {%for quiz in quizzes%}
+                <div style="display: none;" id="id_quiz">{{quiz.id}}</div>
+                <h1>{{quiz.title}}</h1>
+                <img id="image-quiz" src="{{quiz.imageQuiz}}">
+                {%endfor%}
+                   <br/>
+                  <div id="quiz"></div>
+                <p id="avise">Por favor escolha uma opção</p>
+                <div id="button-container">
+                    <button class="button" id="prev" type="button"> Anterior</button>
+                    <button class="button" id="next" type="button"> Próximo</button>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+                <script src="/scripts/quiz.js" defer="defer"></script>
+            </div>
+
+            <div class="result-final">
+                <p id="title">Sugestões</p>
+                <p id="sua-resposta">Sua capacidade de realizar tarefas seria:</p>
+                <p id="pontuacao"></p>
+                <p id="com-base">Com base em suas respostas separamos algumas sugestões</p>
+                    <article id="respostas-box">
+                        
+                        {%for question in allQuestions%}
+                            <div class="respostas" id="sugestao-{{loop.index0}}">
+                                <p class="sugestao">Sugestão {{loop.index}}</p>
+                                <hr>
+                                <p>{{question.textSugest}}</p>
+                                <img src="{{question.imageSugest}}">
+                                <p>{{question.textSugestPos}}</p>
+                            </div>
+                        {%endfor%}
+
+                    </article>
+
+                    <script id="dsq-count-scr" src="//zelon-answers.disqus.com/count.js" async></script>
+                    
+                    <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    try {
+                        var idQuiz = document.getElementById("id_quiz").innerText;
+                    } catch (error) {
+                        console.log(error);
+                    }
+                    var disqus_config = function () {
+                    this.page.url = zelon+idQuiz;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://zelon-answers.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+
+
+        <footer class="page-footer">
+                <div id="sobre">© 2021 Zelon | 
+                <a href="/sobre">Sobre</a></div>
+        </footer>
+    </div>
+    
+</body>
+</html>
