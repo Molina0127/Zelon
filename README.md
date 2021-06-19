@@ -6,3 +6,7 @@ Esse site foi desenvolvido na disciplina de PJI do 2° ano do técnico em inform
   <li>José Roberto Claudino Ferreira (SP3024369)</li>
   <li>Guilherme Molina Trindade      (SP3030261)</li>
  </ul>
+
+<h4 align="center">
+  🚧 Projeto README 🚀 Em construção... 🚧
+</h4>
